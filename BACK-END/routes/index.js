@@ -20,13 +20,12 @@ router.post('/', async (req, res) => {
 
 router.post('/register', async (req, res) =>{
      User.init(); 
-     const {username, email, password, rol} = req.body;
+     const {username, email, password} = req.body;
      const user = new User({
           _id: new Types.ObjectId(),
           username: username,
           email: email,
-          password: password,
-          roles: rol
+          password: password
      }); 
      user.password = await user.encryptPassword(user.password);
      await user.save();
@@ -64,7 +63,7 @@ router.post('/login', async (req, res) =>{
           return res.status(401).send({auth: false, token: null});
      }
      const token = jwt.sign({id: user._id}, config.secret); 
-     res.json({auth: true, token, id_user: user._id});     
+     res.json({auth: true, token, id_user: user._id, role: user.roles[0]});     
 });
 
 router.get('/logout', async (req, res )=>{

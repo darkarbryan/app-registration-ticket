@@ -6,6 +6,7 @@ import { MainComponent } from './components/main/main.component';
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
+import { MainContentService } from './services/main-content/main-content.service';
 
 @NgModule({
   declarations: [
@@ -17,6 +18,9 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     FormsModule,
     HttpClientModule,
     ReactiveFormsModule
+  ],
+  providers: [
+    MainContentService
   ]
 })
 export class HomeModule { }

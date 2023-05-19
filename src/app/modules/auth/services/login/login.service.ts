@@ -24,7 +24,7 @@ export class LoginService {
           console.log(res);
           if(res){
             //guardar token
-            this.saveDataLogin(res.token, res.id_user);
+            this.saveDataLogin(res.token, res.id_user, res.role);
           }
         })
       );
@@ -37,9 +37,10 @@ export class LoginService {
     localStorage.removeItem("ID_USER");   
   }
 
-  private saveDataLogin(token:string, idUser:string){
+  private saveDataLogin(token:string, idUser:string, role:string){
     localStorage.setItem("ACCESS_TOKEN", token);
     localStorage.setItem("ID_USER", idUser);
+    localStorage.setItem("ROLE_USER", role);
   } 
 
   public getToken():string{

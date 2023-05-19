@@ -1,0 +1,35 @@
+.menu{
+    display: flex;
+    align-items: center;
+    background-color: rgb(232, 248, 245 );
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    width: auto;
+    height: 100%;    
+    color: black;
+}
+
+.menu ol{
+    padding: 3vh;
+}
+
+.menu ul{
+    padding: 3vh 1vh;
+    display: flex;
+    justify-content: center;    
+}
+
+.sombreado{
+    box-shadow: 0px 0px 10px 0px #9b9b9b,
+        0 1px 1px 0 #9b9b9b,
+        0 1px 3px 0 #9b9b9b;
+}
+
+.content{
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

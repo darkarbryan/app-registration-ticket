@@ -14,7 +14,6 @@ export class RegisterUserComponent implements OnInit{
   public email:string = "";
   public pass1:string = "";
   public pass2:string = "";
-  public selectedValue: any;
 
   constructor(
     private registerService: RegisterService
@@ -28,8 +27,7 @@ export class RegisterUserComponent implements OnInit{
     let objRegisterUser: any = {
       username: this.username,
       email: this.email,
-      password: this.pass1,
-      rol: this.selectedValue
+      password: this.pass1
     }
 
     if(!this.validateFields()){

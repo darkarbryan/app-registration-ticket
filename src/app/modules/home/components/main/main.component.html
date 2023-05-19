@@ -1,1 +1,22 @@
-<h3 style="text-align: center;">Hola mundo</h3>
+<div class="menu sombreado" *ngIf="role=='administrador'">   
+    <ol>
+        <ul>Opcion 1</ul>
+        <ul>Opcion 2</ul>
+        <ul>Opcion 3</ul>
+        <ul>Opcion 4</ul>
+    </ol>    
+
+</div>
+
+<div class="content" *ngIf="role=='usuario'">
+
+    <button>Operacion usuario 1</button>
+    <button>Operacion usuario 2</button>
+    <button>Operacion usuario 3</button>
+    <button>Operacion usuario 4</button>   
+
+</div>
+
+<div class="content" *ngIf="role!=='usuario' && role!=='administrador'">
+    <h4>No content avaiable for this role.</h4>
+</div>

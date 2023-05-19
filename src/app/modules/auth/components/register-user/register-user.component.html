@@ -7,11 +7,7 @@
             <input type="email" placeholder="Ingresa tu Correo" name="email" [(ngModel)]="email">
             <input type="password" placeholder="Ingresa tu Contraseña" name="password1" [(ngModel)]="pass1">
             <input type="password" placeholder="Confirmar la Contraseña" name="password2" [(ngModel)]="pass2">
-            <select name="rol" [(ngModel)]="selectedValue">
-                <option value="" disabled="true">Seleccione una</option>
-                <option value="usuario">Usuario</option>
-                <option value="administrador">Administrador</option>                
-            </select>
+
             <input type="button" class="button" value="Registrar usuario" (click)="registerUser()">
         </form>
         <div class="signup">
