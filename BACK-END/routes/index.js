@@ -20,12 +20,13 @@ router.post('/', async (req, res) => {
 
 router.post('/register', async (req, res) =>{
      User.init(); 
-     const {username, email, password} = req.body;
+     const {username, email, password, rol} = req.body;
      const user = new User({
           _id: new Types.ObjectId(),
           username: username,
           email: email,
-          password: password
+          password: password,
+          roles: rol
      }); 
      user.password = await user.encryptPassword(user.password);
      await user.save();

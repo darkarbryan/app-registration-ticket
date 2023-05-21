@@ -27,7 +27,8 @@ export class RegisterUserComponent implements OnInit{
     let objRegisterUser: any = {
       username: this.username,
       email: this.email,
-      password: this.pass1
+      password: this.pass1,
+      rol: 'usuario'
     }
 
     if(!this.validateFields()){
